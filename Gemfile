@@ -28,7 +28,13 @@ group :development do
   gem 'spring',                '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
 end
-
+group :production do
+  gem 'pg', '0.18.4'
+end
+group :development, :test do
+  gem 'sqlite3', '1.3.12'
+  gem 'byebug',  '9.0.0', platform: :mri
+end
 group :test do
   gem 'rails-controller-testing', '0.1.1'
   gem 'minitest-reporters',       '1.1.9'
