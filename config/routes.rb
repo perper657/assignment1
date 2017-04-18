@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'sessions/login'
 
-  get 'sessions/new'
+  get 'users/new'
 
   get 'users/login'
   resources :users
