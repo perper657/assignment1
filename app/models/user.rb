@@ -58,6 +58,9 @@ has_secure_password
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
+  
+
+  private
    # Converts email to all lower-case.
       def downcase_email
         self.email = email.downcase
@@ -68,7 +71,5 @@ has_secure_password
         self.activation_token  = User.new_token
         self.activation_digest = User.digest(activation_token)
       end
-
-  private
   
 end
